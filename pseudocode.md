@@ -1,15 +1,13 @@
-Theme: Summer 
-
 Constants 
 -Words array
-    -sunscreen (noun), tanning (verb), beach (noun), swimming (verb), sandcastle (noun), quarantining (verb)
+    -sunscreen, tanning, beach, swimming, sandcastle
 
 App state variables
--diagram, word, win 
+-hiddenWord (keep track ), lettersGuessed, mistakesMade,  
 
 Cached elements 
 -The individual cells with the alphabet 
--
+
 
 Initialize the game 
 -Choose random word, display the blank cells for the random word
@@ -29,12 +27,14 @@ Win Logic
 -create lines for all words, but set them to 
 
 
-Gameplay:
+Gameplay/App Functionality:
 -Loads a random word 
--Blank spaces load
+-Blank spaces load (Letters are white), when they are matched, turn on the color 
 -Diagram is blank
 -User makes a choice 
 -When choice matches a letter, show the matched letter, disable that button
 -When choice does not match a letter, subtract an attempt, show diagram piece, disable button
 -Win: When all letters have been matched, show congrats message, randomly load next word (make sure word that was just completed is not used)
 -When attempts reach 0, gameover, show lose message, click button to play again and load new word (initialize)
+
+-if word has been guessed, pop it from the array. 
