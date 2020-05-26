@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(230, 178, 129);
+}
+#diagram {
+    height: 250px;
+    border: solid 3px rgb(230, 178, 129);
+}
+#alphabet {
+    text-align: center;
+    margin: 20px;
+}
+.alph {
+    background-color: rgb(230, 178, 129);
+    border: none;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+}
+.alph:hover {
+    background-color:rgb(216, 138, 65);
+    cursor: pointer;
+}
+#play-again {
+    text-align: center;
+}
+
+#play-again button {
+    background-color: rgb(230, 178, 129);
+    border: none;
+    height: 50px;
+    width: 150px;
+    margin: 10px;
+    color: white;
+    font-size: 15px;
+}
+#play-again button:hover {
+    background-color:rgb(216, 138, 65);
+    cursor: pointer;
+}
