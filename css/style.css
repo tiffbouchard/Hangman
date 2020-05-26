@@ -1,18 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 body {
     box-sizing: border-box;
+    margin: 0;
+    font-family: 'Raleway', sans-serif; 
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
+main {
+    max-width: 900px; 
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 header {
-    font-family: Arial, Helvetica, sans-serif;
+    height: 90px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(235, 159, 115);
+}
+h1 {
+    text-align: center;
+}
+#win-lose-msg {
     text-align: center;
     color: rgb(230, 178, 129);
 }
-#diagram {
-    height: 250px;
+#diagram-space {
+    height: 310px;
     border: solid 3px rgb(230, 178, 129);
+}
+#diagram {
+    position: relative;
+    margin: auto;
+    top: 10%;
+    height: 250px;
+    width: 300px;
+}
+#base {
+    position: relative;
+    border: solid black;
+    border-radius: 5px;;
+    width: 100px;
+    top: 100%;
+}
+#pole1 {
+    position: relative;
+    border: solid black;
+    border-radius: 5px;
+    top: 47%;
+    left: -25%;
+    transform: rotate(90deg);
+    width: 250px;
+}
+#pole2 {
+    position: relative;
+    border: solid black;
+    border-radius: 5px;
+    left: 17%;
+    top: -6%;
+    width: 150px;
+}
+#pole3 {
+    position: relative;
+    border: solid black;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    left: 62%;
+    top: -1%;
+    width: 30px;
+}
+#head {
+    position: relative;
+    border: solid black 5px;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    left: 60%;
+    top: 3%;
+}
+#body {
+    position: relative;
+    border: solid black;
+    border-radius: 5px;
+    width: 100px;
+    left: 50.4%;
+    top: 22%;
+    transform: rotate(90deg); 
+}
+#arms{ 
+    position: relative;
+    border: solid black;
+    border-radius: 5px;
+    width: 80px;
+    left: 54%;
+    top: 10%;
+}
+#leg1 {
+    position: relative;
+    border: solid black;
+    background-color: black;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    width: 50px;
+    left: 65%;
+    top: 45%;
+}
+#leg2 {
+    position: relative;
+    border: solid black;
+    background-color: black;
+    border-radius: 5px;
+    transform: rotate(-45deg);
+    width: 50px;
+    left: 52.5%;
+    top: 42.5%;
+}
+#words-to-guess {
+    text-align: center;
+    color: rgb(230, 178, 129);
 }
 #alphabet {
     text-align: center;
@@ -32,9 +139,8 @@ header {
     cursor: pointer;
 }
 #play-again {
-    text-align: center;
+    align-self: center;
 }
-
 #play-again button {
     background-color: rgb(230, 178, 129);
     border: none;
