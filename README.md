@@ -3,13 +3,13 @@
 
 ### Screenshots
 
-### Getting Started
-Click [here](https://www.example.com) to play!
-
 ### Instructions
 1. You have 9 lives to get the word right! Match all the letters!
 2. A new word will load once you have completed one!
 3. Click PLAY AGAIN if you lose to restart the game
+
+### Getting Started
+Click [here](https://www.example.com) to play!
 
 ### Next Steps
 - Be able to restart the game without repeating words
