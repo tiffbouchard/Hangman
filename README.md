@@ -1,5 +1,5 @@
 # Hangman 
-*Made using HTML, CSS and Javascript*
+*A simple browser game made using HTML, CSS and Javascript*
 
 ### Screenshots
 
