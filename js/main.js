@@ -1,6 +1,6 @@
 /*----- constants -----*/
 
-const words = ["sunscreen", "tanning", "beach", "swimming"];
+const words = ["sunscreen", "tanning", "beach", "swimming", "camping", "travelling"];
 const maxMistakes = 9;
 
 /*----- app's state (variables) -----*/
@@ -10,12 +10,25 @@ let lettersGuessed = [];
 let letterGuessed;
 let mistakesMade;
 let wordsCompleted = [];
+let wordSplit = [];
 
 /*----- cached element references -----*/
 
 let buttons = document.getElementById("keyboard");
 let playAgain = document.getElementById("play-again");
 let hangman = document.getElementById("diagram");
+let wordToGuess = document.getElementById("word-to-guess");
+let hiddenWord = document.getElementById("hidden-word");
+
+let base = document.getElementById("base")
+let poleOne = document.getElementById("pole1")
+let poleTwo = document.getElementById("pole2")
+let poleThree = document.getElementById("pole3")
+let head = document.getElementById("head")
+let body = document.getElementById("body")
+let arms = document.getElementById("arms")
+let leg1 = document.getElementById("leg1")
+let leg2 = document.getElementById("leg2")
 
 /*----- event listeners -----*/
 
@@ -24,13 +37,18 @@ playAgain.addEventListener("click", init);
 
 /*----- functions -----*/
 
-function generateRandomWord() {
+init();
+// wordSplit = word.split("");
+
+function renderRandomWord() {
   word = words[Math.floor(Math.random() * words.length)];
-  
-  // document.getElementById("words-to-guess").appendChild('word');
+  hiddenWord.textContent = `${word}`
+
+  //take the array with the letters 
   //separate the word into its letters
   //replace these letters with underscores instead
 }
+
 
 function showWordLetters() {
   //turn word into blank spaces that display only when letters is guessed right
@@ -54,14 +72,16 @@ function renderWordMatch() {
   //grab word from word variable
   //compare letters from the word
   //compare evt.target to word
+  //if word is successfully matched add to wordsCompleted
 }
 
 function init() {
-  hangman.style.display = "hidden";
+  renderRandomWord();
+  hangman.style.display = "none";
   mistakesMade = 0;
   wordsCompleted = [];
   lettersGuessed = [];
-  generateRandomWord();
+  letterGuessed = null;
 }
 
 

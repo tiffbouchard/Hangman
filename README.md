@@ -9,7 +9,7 @@
 3. Click PLAY AGAIN if you lose to restart the game
 
 ### Getting Started
-Click [here](https://www.example.com) to play!
+Click [here](https://tiffbouchard.github.io) to play!
 
 ### Next Steps
 - Be able to restart the game without repeating words
