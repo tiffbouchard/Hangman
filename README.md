@@ -1,13 +1,14 @@
-##Hangman SUMMER Edition 
-Made using HTML, CSS and Javascript
+# Hangman SUMMER Edition 
+### Made using HTML, CSS and Javascript
 
-Screenshots:
+**Screenshots:**
 
-Getting Started: Click here to play!
+**Getting Started:** Click here to play!
 
-Instruction: 
+**Instructions:** 
 ##1. You have 9 lives to get the word right! Match all the letters!
-##2. The game will automatically restart whether you win or lose!
+2. A new word will 
+##2. Click PLAY AGAIN if you wish to 
 
 Next Steps:
 -Be able to restart the game without repeating words
@@ -20,4 +21,5 @@ Next Steps:
 -Add score keeper; every time a word is matched, increment the score by 1, show on page (keep track of how many words a user has guessed correctly)
 -Show when a user has successfully completed all the words 
 -User can advance to next level if all words have been completed
+-Sync the keystrokes 
 
