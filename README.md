@@ -1,16 +1,17 @@
-# Hangman SUMMER Edition 
-## Made using HTML, CSS and Javascript
+# Hangman 
+*Made using HTML, CSS and Javascript*
 
-## Screenshots:
+## Screenshots
 
-## Getting Started: Click here to play!
+## Getting Started
+Click [here](https://www.example.com) to play!
 
-## Instructions:
+## Instructions
 1. You have 9 lives to get the word right! Match all the letters!
 2. A new word will load once you have completed one!
 3. Click PLAY AGAIN if you lose to restart the game
 
-## Next Steps:
+## Next Steps
 - Be able to restart the game without repeating words
 - Show the answer when you get it wrong (useful when you have more words)
 - Include more categories for user to choose from
