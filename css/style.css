@@ -16,20 +16,37 @@ main {
     flex-direction: column;
 }
 header {
-    height: 90px;
+    height: 95px;
     color: rgb(255, 255, 255);
-    background-color: rgb(224, 140, 61);
+    background-color: rgb(223, 150, 82);
 }
 h1 {
+    font-size: 60px;;
     text-align: center;
 }
-#win-lose-msg {
+#msg {
+    font-size: 30px;
     text-align: center;
     color: rgb(233, 143, 58);
     margin: 40px;
 }
+#start {
+    background-color: rgb(219, 147, 79);
+    border: none;
+    height: 50px;
+    width: 150px;
+    color: white;
+    font-size: 15px;
+    align-self: center;
+    border-radius: 20px;
+}
+#start:hover {
+    background-color:rgb(206, 123, 45);
+    cursor: pointer;
+}
 #diagram-space {
     height: 310px;
+    margin: 30px;
 }
 #diagram {
     position: relative;
@@ -135,9 +152,10 @@ h1 {
     border: none;
     height: 50px;
     width: 50px;
-    margin: 10px;
+    margin: 5px;
     color: white;
     font-size: 15px;
+    border-radius: 15px; 
 }
 .alph:hover {
     background-color:rgb(216, 138, 65);
@@ -154,8 +172,9 @@ h1 {
     margin: 10px;
     color: white;
     font-size: 15px;
+    border-radius: 20px;
 }
 #play-again button:hover {
-    background-color:rgb(216, 138, 65);
+    background-color:rgb(206, 123, 45);
     cursor: pointer;
 }
