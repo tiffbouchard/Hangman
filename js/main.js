@@ -27,7 +27,6 @@ let currentWords = [];
 let buttons = document.getElementById("keyboard");
 let playAgain = document.getElementById("play-again");
 let playAgainBtn = document.querySelector("#play-again button");
-playAgainBtn.disabled = true;
 let hangman = document.getElementById("diagram");
 let wordToGuess = document.getElementById("word-to-guess");
 let hiddenWordEl = document.getElementById("hidden-word");
@@ -129,7 +128,6 @@ function init() {
 
 function start() {
   shownWordEl.style.visibility = "hidden";
-  playAgainBtn.disabled = false;
   startButton.remove();
   msg.style.visibility = "hidden";
   mistakesMade = 0;
