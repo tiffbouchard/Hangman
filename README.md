@@ -9,7 +9,7 @@
 3. Click PLAY AGAIN if you lose to restart the game
 
 ### Getting Started
-Click [here](https://tiffbouchard.github.io) to play!
+Click [here](https://tiffbouchard.github.io/Hangman) to play!
 
 ### Next Steps
 - Be able to restart the game without repeating words
@@ -23,4 +23,4 @@ Click [here](https://tiffbouchard.github.io) to play!
 - Show when a user has successfully completed all the words 
 - User can advance to next level if all words have been completed
 - Sync the keystrokes 
-
+- Load next word when word is complete

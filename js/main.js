@@ -181,6 +181,3 @@ function resetHangman() {
   leg1.style.visibility = "hidden";
   leg2.style.visibility = "hidden";
 }
-
-//couple bugs -- why does my play again button not let me play!
-//how to get the shown words to stay!
