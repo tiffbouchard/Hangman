@@ -93,7 +93,7 @@ function renderLetterMatch() {
 
 function renderWin() {
   if (word.includes(letterGuessed)) {
-    msg.textContent = "YOU GOT IT!";
+    msg.textContent = "YOU GOT IT! IF SOLVED REFRESH TO PLAY AGAIN";
     msg.style.visibility = "visible";
   }
 }
@@ -157,7 +157,7 @@ function renderHangman() {
   } else if (mistakesMade === 9) {
     leg2.style.visibility = "visible"
   } if (mistakesMade >= maxMistakes) {
-    msg.textContent = "YOU'RE OUT OF TRIES, PLAY AGAIN";
+    msg.textContent = "YOU'RE OUT OF TRIES, REFRESH TO PLAY AGAIN";
     msg.style.visibility = "visible";
     shownWordEl.style.visibility = "visible";
     hiddenWordEl.style.visibility = "hidden";
