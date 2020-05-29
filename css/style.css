@@ -24,25 +24,38 @@ h1 {
     font-size: 60px;;
     text-align: center;
 }
-#msg {
-    font-size: 30px;
+#theme {
     text-align: center;
-    color: rgb(233, 143, 58);
-    margin: 40px;
+    color: rgb(223, 150, 82);
+    margin: -60px 0 0 0;
+    font-size: 25px; 
 }
 #start {
     background-color: rgb(219, 147, 79);
     border: none;
     height: 50px;
     width: 150px;
+    margin: 10px;
     color: white;
     font-size: 15px;
-    align-self: center;
     border-radius: 20px;
+    align-self: center;
 }
 #start:hover {
     background-color:rgb(206, 123, 45);
     cursor: pointer;
+}
+#msg {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(233, 143, 58);
+    margin: 40px;
+}
+#letters-left {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(233, 143, 58);
+    margin: 0px;
 }
 #diagram-space {
     height: 310px;
@@ -134,18 +147,21 @@ h1 {
     left: 52.5%;
     top: 42.5%;
 }
-#words-to-guess {
-    margin: -30px 0 0 0;
-}
 #hidden-word {
     text-align: center;
     color: rgb(230, 178, 129);
     font-size: 35px;
-
+    margin: -50px 0 100px 0;
+}
+#shown-word {
+    text-align: center;
+    color: rgb(230, 178, 129);
+    font-size: 30px;
+    margin: 40px 0 15px 0;
 }
 #keyboard {
     text-align: center;
-    margin: -20px 20px 20px 20px;
+    margin: -60px 20px 20px 20px;
 }
 .alph {
     background-color: rgb(230, 178, 129);

@@ -15,10 +15,11 @@ const maxMistakes = 9;
 let word;
 let lettersGuessed = [];
 let letterGuessed;
+let correctGuesses;
 let mistakesMade;
 let wordsCompleted = [];
 let wordSplit = [];
-let hiddenWord = [];
+let hiddenWord;
 let currentWords = [];
 
 /*----- cached element references -----*/
@@ -32,9 +33,9 @@ let wordToGuess = document.getElementById("word-to-guess");
 let hiddenWordEl = document.getElementById("hidden-word");
 let startButton = document.getElementById("start");
 let msg = document.getElementById("msg");
+let shownWordEl = document.getElementById("shown-word");
+let lettersLeft = document.getElementById("letters-left");
 
-
-//hangman
 let base = document.getElementById("base");
 let poleOne = document.getElementById("pole1");
 let poleTwo = document.getElementById("pole2");
@@ -46,135 +47,140 @@ let leg1 = document.getElementById("leg1");
 let leg2 = document.getElementById("leg2");
 
 /*----- event listeners -----*/
+
 startButton.addEventListener("click", start);
 buttons.addEventListener("click", handleClick);
 playAgain.addEventListener("click", init);
 
 /*----- functions -----*/
 
-//Have full hangman drawing visible, no secret word visible
-//show Message: READY TO PLAY? 
-//have button to click that says: START!
-//START button will remove the START button and the message and run the init() function;
-
 function handleClick(evt) {
   if (evt.target.id === "keyboard") {
     return;
-  }
+  } 
   letterGuessed = evt.target.innerHTML;
   lettersGuessed.push(letterGuessed);
+  renderLetterMatch();
   if (lettersGuessed.includes(letterGuessed)) {
     evt.target.disabled = true;
-  }
-  renderLetterMatch();
+  } 
 }
 
 function renderRandomWord() {
   word = words[Math.floor(Math.random() * words.length)];
   word = word.toUpperCase();
   currentWords.push(word);
-  //never render the same word, if all words are used up 
-  wordSplit = word.split("");
-  for (var i = 0; i < word.length; i++) {
+  shownWordEl.textContent = word;
+  for (let i = 0; i < word.length; i++) {
     hiddenWord.push("_");
   }
-  hiddenWordEl.textContent = `${hiddenWord.join(" ")}`;
+  hiddenWordEl.textContent = `${hiddenWord.join("")}`;
 }
 
-//use below for mapping when matching letters chosen to letters in the word array
-//  wordSplit = word.split("");
-//   hiddenWordEl.textContent = `${wordSplit}`;
-// hiddenWordEl.style.visibility = "hidden";
-
+ 
 function renderLetterMatch() {
-  // showLetter = wordSplit.includes(letterGuessed);
-  if (wordSplit.includes(letterGuessed) === true) {
+  let answer = [];
+  for (let i = 0; i < word.length; i++) {
+    if (letterGuessed.includes(word[i]) === true) {
+      answer.push(word[i]);
+    } else {
+      answer.push("_");
+      hiddenWordEl.textContent = answer.join("");
+    } 
+  } 
+  renderWin();
+  renderLoss();
+  renderLettersGuessed();
+}
+
+function renderWin() {
+  if (word.includes(letterGuessed) === true) {
     msg.textContent = "YOU GOT IT!";
     msg.style.visibility = "visible";
-  } else if (wordSplit.includes(letterGuessed) === false) {
-    msg.textContent = "TRY AGAIN!";
-    msg.style.visibility = "visible";
-    mistakesMade++;
-  }if (mistakesMade === 1) {
-    base.style.visibility = "visible"
-  } if (mistakesMade === 2) {
-    poleOne.style.visibility = "visible"
-  } if (mistakesMade === 3) {
-    poleTwo.style.visibility = "visible"
-  } if (mistakesMade === 4) {
-    poleThree.style.visibility = "visible"
-  } if (mistakesMade === 5) {
-    head.style.visibility = "visible"
-  } if (mistakesMade === 6) {
-    body.style.visibility = "visible"
-  } if (mistakesMade === 7) {
-    arms.style.visibility = "visible"
-  } if (mistakesMade === 8) {
-    leg1.style.visibility = "visible"
-  } if (mistakesMade === 9) {
-    leg2.style.visibility = "visible"
   }
-} 
+}
 
+function renderLoss() {
+  if (word.includes(letterGuessed) === false) {
+    mistakesMade++;
+    msg.textContent = `"TRY AGAIN! YOU HAVE ${maxMistakes - mistakesMade} TRIES LEFT"`;
+    msg.style.visibility = "visible";
+    renderHangman();
+  }
+}
 
-// if (mistakesMade = maxMistakes) {
-//   msg.textContent = "YOU'RE OUT OF TRIES";
-//   msg.style.visibility = "visible";
-//where to put this^^^
-  
-  //display only those element from wordSplit and show CONGRATS msg (use split to )
-  //if it does not contain, mistakesMade++ and show TRY AGAIN msg
-  //if mistakesMade => maxMistakes end game and show BETTER LUCK NEXT TIME msg 
-  //if all letters are matched, and word is completed, push it to wordsCompleted
-  //
-  //if word is successfully matched add to wordsCompleted
-
-//how to not repeat self everytime
+function renderLettersGuessed() {
+  lettersLeft.style.visibility = "visible";
+  lettersGuessedString = lettersGuessed.toString();
+  lettersLeft.textContent = `Letters Used: ${lettersGuessedString}`;
+}
 
 function init() {
-  renderRandomWord();
-  hangman.style.visibility = "hidden";
-  base.style.visibility = "hidden"
-  poleOne.style.visibility = "hidden"
-  poleTwo.style.visibility = "hidden"
-  poleThree.style.visibility = "hidden"
-  head.style.visibility = "hidden"
-  body.style.visibility = "hidden"
-  arms.style.visibility = "hidden"
-  leg1.style.visibility = "hidden"
-  leg2.style.visibility = "hidden"
+  lettersLeft.style.visibility = "hidden";
+  shownWordEl.style.visibility = "hidden";
+  msg.style.visibility = "hidden";
   mistakesMade = 0;
-  wordsCompleted = [];
   lettersGuessed = [];
   letterGuessed;
   hiddenWord = [];
+  renderRandomWord();
+  resetHangman();
 }
-//find a way to not repeat hidden everytime 
 
 function start() {
-  renderRandomWord();
+  shownWordEl.style.visibility = "hidden";
   playAgainBtn.disabled = false;
-  hangman.style.visibility = "hidden";
   startButton.remove();
   msg.style.visibility = "hidden";
   mistakesMade = 0;
-  wordsCompleted = [];
   lettersGuessed = [];
   letterGuessed;
   hiddenWord = [];
+  renderRandomWord();
+  resetHangman();
 }
 
-//have button greeting saying Are you ready to play! click yes, clicking yes calls the init function
+function renderHangman() {
+  if (mistakesMade === 1) {
+    base.style.visibility = "visible"
+  } else if (mistakesMade === 2) {
+    poleOne.style.visibility = "visible"
+  } else if (mistakesMade === 3) {
+    poleTwo.style.visibility = "visible"
+  } else if (mistakesMade === 4) {
+    poleThree.style.visibility = "visible"
+  } else if (mistakesMade === 5) {
+    head.style.visibility = "visible"
+  } else if (mistakesMade === 6) {
+    body.style.visibility = "visible"
+  } else if (mistakesMade === 7) {
+    arms.style.visibility = "visible"
+  } else if (mistakesMade === 8) {
+    leg1.style.visibility = "visible"
+  } else if (mistakesMade === 9) {
+    leg2.style.visibility = "visible"
+  } if (mistakesMade >= maxMistakes) {
+    msg.textContent = "YOU'RE OUT OF TRIES, PLAY AGAIN";
+    msg.style.visibility = "visible";
+    shownWordEl.style.visibility = "visible";
+    document.querySelectorAll(".alph").forEach(function(alphbutton) {
+      alphbutton.disabled = true;
+    });
+    return;
+  } 
+}
 
-//if the number of matched letters is equal to the length of the word then DISPLAY YOU GOT IT GREAT JOB
-//pop the word that was just solved from the array so the next time around it does not show up
-//and after 5 seconds show a new word
-//must generate the new word from the
+function resetHangman() {
+  base.style.visibility = "hidden";
+  poleOne.style.visibility = "hidden";
+  poleTwo.style.visibility = "hidden";
+  poleThree.style.visibility = "hidden";
+  head.style.visibility = "hidden";
+  body.style.visibility = "hidden";
+  arms.style.visibility = "hidden";
+  leg1.style.visibility = "hidden";
+  leg2.style.visibility = "hidden";
+}
 
-//mistakesMade++
-//when mistakes > maxMistakes return; and display BETTER LUCK NEXT TIME!
-
-
-//when start button is pressed, make transition more smooth, take like 2 seconds to dissapear
-
-//add theme somewhere on the page
+//couple bugs -- why does my play again button not let me play!
+//how to get the shown words to stay!

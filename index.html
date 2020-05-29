@@ -10,9 +10,12 @@
   <body>
     <header>
       <h1>HANGMAN</h1>
+      <p id="theme">summer edition</p>
     </header>
     <main>
-      <p id="win-lose-msg">YOU GOT IT! GREAT JOB!</p>
+      <p id="msg">ARE YOU READY TO PLAY?</p>
+      <p id ="letters-left"></p>
+      <button id="start">START!</button>
       <section id="diagram-space">
         <div id="diagram">
           <div id="base" class="hangman"></div>
@@ -27,6 +30,7 @@
         </div>
       </section>
       <section id="words-to-guess">
+        <p id="shown-word"></p>
         <p id="hidden-word"></p>
       </section>
       <section id="keyboard">
