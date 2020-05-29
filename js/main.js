@@ -76,24 +76,23 @@ function renderRandomWord() {
   hiddenWordEl.textContent = `${hiddenWord.join("")}`;
 }
 
- 
 function renderLetterMatch() {
   let answer = [];
   for (let i = 0; i < word.length; i++) {
-    if (letterGuessed.includes(word[i]) === true) {
+    if (lettersGuessed.includes(word[i])) {
       answer.push(word[i]);
     } else {
       answer.push("_");
-      hiddenWordEl.textContent = answer.join("");
     } 
   } 
+  hiddenWordEl.textContent = answer.join("");
   renderWin();
   renderLoss();
   renderLettersGuessed();
 }
 
 function renderWin() {
-  if (word.includes(letterGuessed) === true) {
+  if (word.includes(letterGuessed)) {
     msg.textContent = "YOU GOT IT!";
     msg.style.visibility = "visible";
   }
@@ -161,6 +160,7 @@ function renderHangman() {
     msg.textContent = "YOU'RE OUT OF TRIES, PLAY AGAIN";
     msg.style.visibility = "visible";
     shownWordEl.style.visibility = "visible";
+    hiddenWordEl.style.visibility = "hidden";
     document.querySelectorAll(".alph").forEach(function(alphbutton) {
       alphbutton.disabled = true;
     });
