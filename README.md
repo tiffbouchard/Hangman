@@ -2,8 +2,8 @@
 *A simple browser game made using HTML, CSS and Javascript*
 
 ### Screenshots
-![Screenshot1](/images/screenshot1.png)
-![Screenshot2](/images/screenshot2.png)
+![Screenshot1](/images/screenshot1.png =250x)
+![Screenshot2](/images/screenshot2.png =250x)
 
 ### Instructions
 1. You have 9 lives to get the word right! Match all the letters!
