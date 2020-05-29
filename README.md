@@ -2,8 +2,8 @@
 *A simple browser game made using HTML, CSS and Javascript*
 
 ### Screenshots
-![Screenshot1](https://imgur.com/EDScCC5)
-![Screenshot2](https://imgur.com/RZrKKkZ)
+![Screenshot1](/images/screenshot1.png)
+![Screenshot2](/images/screenshot2.png)
 
 ### Instructions
 1. You have 9 lives to get the word right! Match all the letters!
@@ -24,3 +24,4 @@ Click [here](https://tiffbouchard.github.io/Hangman) to play!
 - User can advance to next level if all words have been completed
 - Sync the keystrokes 
 - Load next word when word is complete
+
