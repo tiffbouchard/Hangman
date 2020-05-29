@@ -2,7 +2,8 @@
 *A simple browser game made using HTML, CSS and Javascript*
 
 ### Screenshots
-<img src="/images/screenshot1.png" alt="screenshot1" width="450"/><img src="/images/screenshot2.png" alt="screenshot2" width="420"/>
+<img src="/images/screenshot1.png" alt="screenshot1" width="450"/>
+<img src="/images/screenshot2.png" alt="screenshot2" width="450"/>
 
 
 ### Instructions
