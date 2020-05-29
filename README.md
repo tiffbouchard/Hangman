@@ -2,6 +2,8 @@
 *A simple browser game made using HTML, CSS and Javascript*
 
 ### Screenshots
+![Screenshot1](https://imgur.com/EDScCC5)
+![Screenshot2](https://imgur.com/RZrKKkZ)
 
 ### Instructions
 1. You have 9 lives to get the word right! Match all the letters!
