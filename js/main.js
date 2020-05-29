@@ -90,7 +90,7 @@ function renderLetterMatch() {
 
 function renderWin() {
   if (word.includes(letterGuessed)) {
-    msg.textContent = "YOU GOT IT! If solved, refresh to play again";
+    msg.textContent = "YOU GOT IT! IF SOLVED REFRESH TO PLAY AGAIN";
     msg.style.visibility = "visible";
   } 
 }
