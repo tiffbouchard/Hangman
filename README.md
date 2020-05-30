@@ -1,5 +1,5 @@
 # Hangman 
-*A simple browser game made for General Assembly's Software Engineering Immersive Project 1*
+*A simple browser game made for Project 1 of General Assembly's Software Engineering Immersive*
 
 ### Technologies Used:
 - HTML
