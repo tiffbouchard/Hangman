@@ -1,5 +1,10 @@
 # Hangman 
-*A simple browser game made using HTML, CSS and Javascript*
+*A simple browser game made for General Assembly's Software Engineering Immersive Project 1*
+
+### Technologies Used:
+- HTML
+- CSS
+- Javascript
 
 ### Screenshots
 <img src="/images/screenshot1.png" alt="screenshot1" width="450"/>
