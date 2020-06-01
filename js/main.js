@@ -25,8 +25,6 @@ let currentWords = [];
 /*----- cached element references -----*/
 
 let buttons = document.getElementById("keyboard");
-let playAgain = document.getElementById("play-again");
-let playAgainBtn = document.querySelector("#play-again button");
 let hangman = document.getElementById("diagram");
 let wordToGuess = document.getElementById("word-to-guess");
 let hiddenWordEl = document.getElementById("hidden-word");
@@ -49,7 +47,6 @@ let leg2 = document.getElementById("leg2");
 
 startButton.addEventListener("click", start);
 buttons.addEventListener("click", handleClick);
-playAgain.addEventListener("click", init);
 
 /*----- functions -----*/
 
@@ -95,7 +92,7 @@ function renderWin() {
   if (word.includes(letterGuessed)) {
     msg.textContent = "YOU GOT IT! IF SOLVED REFRESH TO PLAY AGAIN";
     msg.style.visibility = "visible";
-  }
+  } 
 }
 
 function renderLoss() {
@@ -111,18 +108,6 @@ function renderLettersGuessed() {
   lettersLeft.style.visibility = "visible";
   lettersGuessedString = lettersGuessed.toString();
   lettersLeft.textContent = `Letters Used: ${lettersGuessedString}`;
-}
-
-function init() {
-  lettersLeft.style.visibility = "hidden";
-  shownWordEl.style.visibility = "hidden";
-  msg.style.visibility = "hidden";
-  mistakesMade = 0;
-  lettersGuessed = [];
-  letterGuessed;
-  hiddenWord = [];
-  renderRandomWord();
-  resetHangman();
 }
 
 function start() {

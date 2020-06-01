@@ -177,20 +177,3 @@ h1 {
     background-color:rgb(216, 138, 65);
     cursor: pointer;
 }
-#play-again {
-    align-self: center;
-}
-#play-again button {
-    background-color: rgb(219, 147, 79);
-    border: none;
-    height: 50px;
-    width: 150px;
-    margin: 10px;
-    color: white;
-    font-size: 15px;
-    border-radius: 20px;
-}
-#play-again button:hover {
-    background-color:rgb(206, 123, 45);
-    cursor: pointer;
-}
