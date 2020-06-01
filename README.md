@@ -33,7 +33,7 @@ Click [here](https://tiffbouchard.github.io/Hangman) to play!
 - Provide hints for the user if words become too difficult. These hints can take on two forms, one level of hints could be the categorization of the word as a noun, verb, adjective, adverb etc., a second level of hints could be more descriptive. This could be accomplished by creating objects for each word category holding the words and their respective hints and categorizations. These hints should be accessed only when a button is clicked (Allowing a limit of hints can also make the game more interesting). 
 - Include audio when a use interacts with different buttons and certain functions are executed (for example, when a new part is added to the hangman, the user clicks a key on the keyboard, the user guesses the letter/word correctly, user advances a level)
 - When level are implemented, a score keeper of how many words there are in a level and how many a user has gotten through (Every time a word is successfully guessed, increment the score by 1, when the score is equal to the amount of words in a given level, provide an option to advance to the next level)
--Sync keystrokes to the built in keyboard for an optional user experience
+- Sync keystrokes to the built in keyboard for an optional user experience
 - Generate names/personalities for the hangman each round to create a more fun and novel experience 
 - Instead of listing the letters used, change the color/turn off hover function of the given letter on the keyboard for a better user experience. This will make it easier for the user to see the letters they have used without having to scan a list. 
 - Improve CSS to be more interesting
