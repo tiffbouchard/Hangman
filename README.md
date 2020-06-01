@@ -19,7 +19,8 @@
 3. Guess the random word letter-by-letter using the built in keyboard (Don't go to crazy though you are only allowed 9 mistakes!)
 4. Change the fate of your hangman by guessing the entire word correctly 
 5. If you happen to fail in saving your hangman, the answer will appear
-6. If you wish to play again after winning or losing, refresh the page
+6. If you wish to play again after winning or losing, refresh the page  
+
 *Hint: Try testing out vowels first!*
 
 ### Getting Started
