@@ -10,8 +10,8 @@
 - Javascript
 
 ### Screenshots
-<img src="/images/screenshot1.png" alt="screenshot1" width="500" clip="rect(0px,60px,200px,0px)"/>
-<img src="/images/screenshot2.png" alt="screenshot2" width="500" clip="rect(0px,60px,200px,0px)"/>
+<img src="/images/screenshot1.png" alt="screenshot1" width="500"/>
+<img src="/images/screenshot2.png" alt="screenshot2" width="500"/>
 
 ### Instructions
 1. Click the start button when you are ready to play
